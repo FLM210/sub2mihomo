@@ -680,7 +680,7 @@ func ConvertToMihomo(subContent string, filterKeywords ...string) (*map[string]i
 				"proxies": []interface{}{"AUTO", "DIRECT"}, // Default to using AUTO group
 			},
 		},
-		"mode":                "global",
+		"mode":                "rule",
 		"log-level":           "info",
 		"allow-lan":           true,           // Allow connections from LAN
 		"mixed-port":          10801,          // Mixed proxy port for HTTP and SOCKS
