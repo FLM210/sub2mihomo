@@ -21,7 +21,7 @@ func ConvertHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var reqBody models.SubscriptionRequest
-	
+
 	// Try to read as JSON first
 	contentType := r.Header.Get("Content-Type")
 	if strings.Contains(contentType, "application/json") {
@@ -30,7 +30,7 @@ func ConvertHandler(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Error reading request body", http.StatusBadRequest)
 			return
 		}
-		
+
 		if err := json.Unmarshal(body, &reqBody); err != nil {
 			http.Error(w, "Error parsing JSON", http.StatusBadRequest)
 			return
@@ -43,7 +43,7 @@ func ConvertHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		reqBody.URL = r.FormValue("url")
-		
+
 		// Handle filter as comma-separated values
 		filterStr := r.FormValue("filter")
 		if filterStr != "" {
@@ -85,7 +85,7 @@ func ConvertHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error generating YAML config", http.StatusInternalServerError)
 		return
 	}
-	
+
 	// Set response headers for YAML file download
 	w.Header().Set("Content-Type", "application/yaml")
 	w.Header().Set("Content-Disposition", "attachment; filename=config.yaml")
@@ -212,8 +212,8 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	<body>
 		<div class="container">
 			<div class="lang-selector">
-				<a href="https://github.com/your-repo/sub2mihomo/blob/main/README.md" class="lang-link">English</a>
-				<a href="https://github.com/your-repo/sub2mihomo/blob/main/README_zh-CN.md" class="lang-link">中文</a>
+				<a href="https://github.com/FLM210/sub2mihomo/blob/main/README.md" class="lang-link">English</a>
+				<a href="https://github.com/FLM210/sub2mihomo/blob/main/README.md_zh-CN.md" class="lang-link">中文</a>
 			</div>
 			
 			<h1>Subscription to Mihomo Config Converter</h1>
