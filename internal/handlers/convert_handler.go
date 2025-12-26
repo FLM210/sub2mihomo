@@ -213,7 +213,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		<div class="container">
 			<div class="lang-selector">
 				<a href="https://github.com/FLM210/sub2mihomo/blob/main/README.md" class="lang-link">English</a>
-				<a href="https://github.com/FLM210/sub2mihomo/blob/main/README.md_zh-CN.md" class="lang-link">中文</a>
+				<a href="https://github.com/FLM210/sub2mihomo/blob/main/README_zh-CN.md" class="lang-link">中文</a>
 			</div>
 			
 			<h1>Subscription to Mihomo Config Converter</h1>
